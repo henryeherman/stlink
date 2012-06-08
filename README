@@ -144,3 +144,9 @@ Known Working Targets:
 
 Please report any and all known working combinations so I can update this!
 
+*NOTE* 
+If you use homebrew to install libusb you must run the following commands to setup aclocal properly
+
+eval `brew --config | grep HOMEBREW_PREFIX | sed 's/: /=/'`
+sudo bash -c 'echo '$HOMEBREW_PREFIX/share/aclocal' >> `aclocal --print-ac-dir`/dirlist'
+
